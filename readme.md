@@ -18,7 +18,7 @@ import { ReactDadata } from 'react-dadata-custom-proxy';
 
 // ...
 
-<ReactDadata token="API_KEY" query="Москва" placeholder="" />
+<ReactDadata url="https://someproxyserver.com/proxy-url" query="Москва" placeholder="" />
 ```
 
 ### Свойства
