@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Highlighter from 'react-highlight-words';
-import './react-dadata.styl';
+import './react-dadata.css';
 
 declare module 'react' {
      interface InputHTMLAttributes<T> {

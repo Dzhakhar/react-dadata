@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var Highlighter = require("react-highlight-words");
-require("./react-dadata.styl");
+require("./react-dadata.css");
 var ReactDadata = /** @class */ (function (_super) {
     __extends(ReactDadata, _super);
     function ReactDadata(props) {

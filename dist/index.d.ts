@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './react-dadata.styl';
+import './react-dadata.css';
 declare module 'react' {
     interface InputHTMLAttributes<T> {
         validate?: (value: string) => void;
