@@ -73,9 +73,11 @@ var ReactDadata = /** @class */ (function (_super) {
                 _this.xhr.abort();
             }
             _this.xhr = new XMLHttpRequest();
-            _this.xhr.open("POST", "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address?5");
+            _this.xhr.open("POST", _this.props.url || "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address?5");
             _this.xhr.setRequestHeader("Accept", "application/json");
-            _this.xhr.setRequestHeader("Authorization", "Token " + _this.props.token);
+            if (_this.props.token) {
+                _this.xhr.setRequestHeader("Authorization", "Token " + _this.props.token);
+            }
             _this.xhr.setRequestHeader("Content-Type", "application/json");
             var requestPayload = {
                 query: _this.state.query,

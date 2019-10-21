@@ -89,11 +89,12 @@ export declare namespace ReactDadata {
     };
     type BoundsType = 'region' | 'area' | 'city' | 'settlement' | 'street' | 'house';
     interface Props {
-        token: string;
+        token?: string;
         placeholder?: string;
         query?: string;
         autoload?: boolean;
         count?: number;
+        url?: string;
         onChange?: (suggestion: DadataSuggestion) => void;
         autocomplete?: string;
         validate?: (value: string) => void;
