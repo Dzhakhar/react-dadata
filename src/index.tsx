@@ -99,6 +99,7 @@ export namespace ReactDadata {
     query?: string
     autoload?: boolean
     count?: number
+    url?:string
     onChange?: (suggestion: DadataSuggestion) => void
     autocomplete?: string
     validate?: (value: string) => void
@@ -207,7 +208,7 @@ export class ReactDadata extends React.PureComponent<ReactDadata.Props, ReactDad
       this.xhr.abort();
     }
     this.xhr = new XMLHttpRequest();
-    this.xhr.open("POST", "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address?5");
+    this.xhr.open("POST", this.props.url || "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address?5");
     this.xhr.setRequestHeader("Accept", "application/json");
     this.xhr.setRequestHeader("Authorization", `Token ${this.props.token}`);
     this.xhr.setRequestHeader("Content-Type", "application/json");
