@@ -25,7 +25,8 @@ import { ReactDadata } from 'react-dadata-custom-proxy';
 
 | Свойство  | Обязательный | Тип | Описание |
 | ------------- | ------------- | ------------- | ------------- |
-| token  | Да  | string  | Авторизационный токен DaData.ru  |
+| token  | Нет  | string  | Авторизационный токен DaData.ru  |
+| url  | Нет  | string  | URL-адрес вашего proxy сервера  |
 | placeholder  | Нет  | string  | Текст placeholder  |
 | query  | Нет  | string  | Начальное значение поля ввода  |
 | autoload  | Нет  | boolean  | Если `true`, то запрос на получение подсказок будет инициирован в фоне сразу, после монтирования компонента  |
