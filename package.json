@@ -1,6 +1,6 @@
 {
   "name": "react-dadata-custom-proxy",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "React-компонент для подсказок адресов с помощью сервиса DaData.ru (CUSTOMIZABLE PROXY edition)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
