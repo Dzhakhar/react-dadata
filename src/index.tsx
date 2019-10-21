@@ -94,7 +94,7 @@ export namespace ReactDadata {
   export type BoundsType = 'region' | 'area' | 'city' | 'settlement' | 'street' | 'house'
 
   export interface Props  {
-    token: string
+    token?: string
     placeholder?: string
     query?: string
     autoload?: boolean
@@ -210,7 +210,9 @@ export class ReactDadata extends React.PureComponent<ReactDadata.Props, ReactDad
     this.xhr = new XMLHttpRequest();
     this.xhr.open("POST", this.props.url || "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address?5");
     this.xhr.setRequestHeader("Accept", "application/json");
-    this.xhr.setRequestHeader("Authorization", `Token ${this.props.token}`);
+    if(this.props.token) {
+      this.xhr.setRequestHeader("Authorization", `Token ${this.props.token}`);
+    }
     this.xhr.setRequestHeader("Content-Type", "application/json");
     let requestPayload: any = {
       query: this.state.query,
