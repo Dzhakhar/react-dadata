@@ -1,7 +1,7 @@
 {
-  "name": "react-dadata",
+  "name": "react-dadata-custom-proxy",
   "version": "1.3.3",
-  "description": "React-компонент для подсказок адресов с помощью сервиса DaData.ru",
+  "description": "React-компонент для подсказок адресов с помощью сервиса DaData.ru (CUSTOMIZABLE PROXY edition)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,19 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitalybaev/react-dadata.git"
+    "url": "git+https://github.com/Dzhakhar/react-dadata.git"
   },
   "keywords": [
     "react",
     "dadata",
-    "suggestion"
+    "suggestion",
+    "dadata-proxy",
+    "react-dadata-proxy"
   ],
-  "author": "Vitaly Baev <hello@vitalybaev.ru>",
+  "author": "Dzhakhar Ukhaev <dzhakhar.ukhaev@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vitalybaev/react-dadata/issues"
+    "url": "https://github.com/Dzhakhar/react-dadata/pulls"
   },
-  "homepage": "https://github.com/vitalybaev/react-dadata#readme",
+  "homepage": "https://github.com/Dzhakhar/react-dadata",
   "dependencies": {
     "react-highlight-words": "^0.15.0"
   },
