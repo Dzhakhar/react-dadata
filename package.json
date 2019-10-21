@@ -1,6 +1,6 @@
 {
   "name": "react-dadata-custom-proxy",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "React-компонент для подсказок адресов с помощью сервиса DaData.ru (CUSTOMIZABLE PROXY edition)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,11 +29,11 @@
   "homepage": "https://github.com/Dzhakhar/react-dadata",
   "dependencies": {
     "@babel/core": "^7.6.4",
-    "css-loader": "^3.2.0",
-    "react-highlight-words": "^0.15.0",
-    "style-loader": "^1.0.0"
+    "react-highlight-words": "^0.15.0"
   },
   "devDependencies": {
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
     "@types/react": "^16.7.18",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
