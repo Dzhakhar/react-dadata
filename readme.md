@@ -1,5 +1,5 @@
 # React Dadata
-React компонент для подсказок адресов с помощью сервиса DaData.ru (*CUSTOMIZABLE PROXY* edition)
+React компонент для подсказок адресов с помощью сервиса DaData.ru (**CUSTOMIZABLE PROXY** edition)
 
 <img width="728" alt="React Dadata" src="https://user-images.githubusercontent.com/724423/29621151-9ea462b6-8828-11e7-88ba-07f9619c0182.png">
 
