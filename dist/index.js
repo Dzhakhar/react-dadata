@@ -21,13 +21,13 @@ var ReactDadata = /** @class */ (function (_super) {
     function ReactDadata(props) {
         var _this = _super.call(this, props) || this;
         _this.onInputFocus = function () {
-            _this.setState({ inputFocused: true });
+            _this.setState({ inputFocused: true }, _this.scrollInputToTheRight);
             if (_this.state.suggestions.length == 0) {
                 _this.fetchSuggestions();
             }
         };
         _this.onInputBlur = function () {
-            _this.setState({ inputFocused: false });
+            _this.setState({ inputFocused: false }, _this.scrollInputToTheRight);
             if (_this.state.suggestions.length == 0) {
                 _this.fetchSuggestions();
             }
@@ -123,6 +123,11 @@ var ReactDadata = /** @class */ (function (_super) {
                 }
             };
         };
+        _this.scrollInputToTheRight = function () {
+            if (_this.textInput) {
+                _this.textInput.scrollLeft = _this.textInput.scrollWidth;
+            }
+        };
         _this.onSuggestionClick = function (index, event) {
             event.stopPropagation();
             _this.selectSuggestion(index);
@@ -170,6 +175,7 @@ var ReactDadata = /** @class */ (function (_super) {
         if (this.props.autoload && this.state.query) {
             this.fetchSuggestions();
         }
+        this.scrollInputToTheRight();
     };
     ;
     ReactDadata.prototype.render = function () {

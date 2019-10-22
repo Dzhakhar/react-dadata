@@ -151,17 +151,19 @@ export class ReactDadata extends React.PureComponent<ReactDadata.Props, ReactDad
     if (this.props.autoload && this.state.query) {
       this.fetchSuggestions();
     }
+
+    this.scrollInputToTheRight();
   };
 
   onInputFocus = () => {
-    this.setState({inputFocused: true});
+    this.setState({inputFocused: true}, this.scrollInputToTheRight);
     if (this.state.suggestions.length == 0) {
       this.fetchSuggestions();
     }
   };
 
   onInputBlur = () => {
-    this.setState({inputFocused: false});
+    this.setState({inputFocused: false}, this.scrollInputToTheRight);
     if (this.state.suggestions.length == 0) {
       this.fetchSuggestions();
     }
@@ -260,6 +262,12 @@ export class ReactDadata extends React.PureComponent<ReactDadata.Props, ReactDad
         }
       }
     };
+  };
+
+  scrollInputToTheRight = () => {
+    if(this.textInput) {
+      this.textInput.scrollLeft = this.textInput.scrollWidth;
+    }
   };
 
   onSuggestionClick = (index: number, event: React.MouseEvent<HTMLDivElement>) => {
